@@ -1,0 +1,13 @@
+{
+  "name": "tamkeen-academy-platform",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev:server": "cd server && node server.js",
+    "dev:client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "test": "cd server && npm run test",
+    "migrate": "cd server && npm run migrate",
+    "seed": "cd server && npm run seed"
+  }
+}

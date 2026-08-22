@@ -1,0 +1,425 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><meta name="description" content="تمكّن — منصة تعليمية وتقنية تساعدك على تطوير المعرفة والمهارات وتحقيق أهدافك."/><title>تمكّن | تعلّم، تطوّر، أنجز</title><link rel="icon" type="image/png" href="profile.png"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet"/><style>
+:root{--navy-950:#050d1a;--navy-900:#0A1628;--navy-800:#0D1F4C;--royal-700:#1A3C8F;--royal-400:#2563EB;--royal-300:#3B82F6;--gold-500:#B8860B;--gold-400:#C9A84C;--gold-300:#D4B96A;--gold-200:#E8D5A3}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Tajawal','Cairo',sans-serif;direction:rtl;text-align:right;background:var(--navy-900);color:#fff;overflow-x:hidden}
+a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;display:block}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--navy-950)}
+::-webkit-scrollbar-thumb{background:var(--royal-700);border-radius:3px}::selection{background:rgba(201,168,76,.3)}
+.gtg{background:linear-gradient(135deg,#B8860B,#C9A84C,#E8D5A3,#C9A84C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.container{max-width:1280px;margin:0 auto;padding:0 1.5rem}
+@media(min-width:640px){.container{padding:0 2rem}}@media(min-width:1024px){.container{padding:0 3rem}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 32px;border-radius:50px;font-family:'Tajawal',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;border:none;transition:all .3s;white-space:nowrap}
+.bg{background:linear-gradient(135deg,var(--gold-500),var(--gold-400));color:var(--navy-900)}
+.bg:hover{transform:translateY(-2px);box-shadow:0 12px 35px rgba(201,168,76,.45)}
+.bo{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.35)}
+.bo:hover{border-color:var(--royal-300);color:var(--royal-300);background:rgba(37,99,235,.1);transform:translateY(-2px)}
+.bw{background:linear-gradient(135deg,#25D366,#128C7E);color:#fff}
+.bw:hover{transform:translateY(-2px);box-shadow:0 12px 35px rgba(37,211,102,.35)}
+.bsm{padding:10px 22px;font-size:.9rem}.blg{padding:16px 40px;font-size:1.1rem}
+.sbadge{display:inline-flex;align-items:center;gap:6px;padding:6px 16px;border-radius:50px;font-size:.82rem;font-weight:600;margin-bottom:16px}
+.sg{background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.35);color:var(--gold-300)}
+.sb{background:rgba(37,99,235,.12);border:1px solid rgba(37,99,235,.35);color:var(--royal-300)}
+.stitle{font-family:'Cairo',sans-serif;font-weight:900;font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.2;color:#fff;margin-bottom:12px}
+.gdiv{width:60px;height:3px;background:linear-gradient(90deg,var(--gold-400),var(--gold-300));border-radius:2px;margin:0 auto 20px}
+.ssub{color:rgba(255,255,255,.55);font-size:1rem;line-height:1.8;max-width:520px;margin:0 auto}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+#navbar{position:fixed;top:0;right:0;left:0;z-index:100;padding:1.25rem 0;transition:all .3s}
+#navbar.scrolled{padding:.75rem 0;background:rgba(5,13,26,.9);backdrop-filter:blur(24px);border-bottom:1px solid rgba(37,99,235,.15)}
+.navi{display:flex;align-items:center;justify-content:space-between}
+.nlogo{display:flex;align-items:center;gap:12px}
+.nlogo img{width:44px;height:44px;border-radius:50%;border:2px solid var(--gold-400);object-fit:cover}
+.nlogt{font-family:'Cairo',sans-serif;font-weight:900;font-size:1.3rem;color:#fff}
+.nlinks{display:flex;align-items:center;gap:4px}
+.nlinks a{padding:8px 16px;border-radius:10px;font-size:.9rem;font-weight:500;color:rgba(255,255,255,.75);transition:all .2s}
+.nlinks a:hover{color:#fff;background:rgba(255,255,255,.1)}
+.ncta{margin-right:16px}
+.hbtn{display:none;background:none;border:none;color:#fff;cursor:pointer;padding:8px;border-radius:10px}
+.hbtn:hover{background:rgba(255,255,255,.1)}
+.movl{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:150}
+.movl.open{display:block}
+.mdrw{position:fixed;top:0;right:0;width:min(300px,85vw);height:100vh;background:rgba(5,13,26,.98);backdrop-filter:blur(20px);z-index:200;transform:translateX(100%);transition:transform .32s cubic-bezier(.4,0,.2,1);border-left:1px solid rgba(37,99,235,.2);padding:1.5rem;overflow-y:auto}
+.mdrw.open{transform:translateX(0)}
+.dhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem}
+.dcls{background:none;border:none;color:rgba(255,255,255,.5);cursor:pointer;padding:6px;border-radius:8px}
+.dcls:hover{color:#fff;background:rgba(255,255,255,.1)}
+.dlinks a{display:block;padding:12px 16px;border-radius:12px;font-size:1rem;font-weight:600;color:rgba(255,255,255,.75);margin-bottom:4px;transition:all .2s}
+.dlinks a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.dacts{margin-top:1.5rem;display:flex;flex-direction:column;gap:12px}
+@media(max-width:900px){.nlinks{display:none}.ncta{display:none}.hbtn{display:flex;align-items:center}}
+#hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:linear-gradient(135deg,#050d1a 0%,#0A1628 55%,#0D1F4C 100%)}
+#hcanvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.horb{position:absolute;border-radius:50%;pointer-events:none;filter:blur(50px)}
+.hcontent{position:relative;z-index:10;width:100%;padding:8rem 0 5rem}
+.hinner{display:flex;align-items:center;justify-content:space-between;gap:4rem}
+.htext{flex:1}
+.hbadge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border-radius:50px;font-size:.85rem;font-weight:600;margin-bottom:1.5rem;background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.3);color:var(--gold-300)}
+.hbdot{width:8px;height:8px;border-radius:50%;background:var(--gold-400);animation:pdot 2s ease-in-out infinite}
+@keyframes pdot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(.8)}}
+.htitle{font-family:'Cairo',sans-serif;font-weight:900;font-size:clamp(3rem,7vw,5.5rem);line-height:1.12;margin-bottom:1.5rem}
+.htitle .lg{display:block;background:linear-gradient(135deg,#B8860B,#C9A84C,#E8D5A3,#C9A84C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.htitle .lw{display:block;color:#fff}
+.hsub{color:rgba(255,255,255,.7);font-size:clamp(1rem,2.5vw,1.15rem);line-height:1.85;margin-bottom:2.5rem;max-width:520px}
+.hctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:2.5rem}
+.hpills{display:flex;flex-wrap:wrap;gap:10px}
+.hpill{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:50px;font-size:.85rem;font-weight:500;color:rgba(255,255,255,.7);background:rgba(37,99,235,.12);border:1px solid rgba(37,99,235,.25)}
+.hlogowrap{flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.hlogoinner{position:relative}
+.hlogoimg{width:clamp(200px,22vw,300px);height:clamp(200px,22vw,300px);object-fit:contain;position:relative;z-index:2;filter:drop-shadow(0 0 35px rgba(37,99,235,.45));animation:flogo 7s ease-in-out infinite}
+@keyframes flogo{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.lring1{position:absolute;inset:-12px;border-radius:50%;border:2px solid rgba(201,168,76,.2);animation:pring 3.5s ease-out infinite}
+.lring2{position:absolute;inset:-28px;border-radius:50%;border:1px solid rgba(37,99,235,.15);animation:pring 3.5s ease-out infinite 1.2s}
+@keyframes pring{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.15);opacity:0}}
+.shint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:6px;color:rgba(255,255,255,.3);font-size:.75rem}
+.sarrow{animation:bdwn 2s ease-in-out infinite;color:var(--gold-400)}
+@keyframes bdwn{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+@media(max-width:900px){.hinner{flex-direction:column;text-align:center}.htext{order:2}.hlogowrap{order:1}.hctas,.hpills{justify-content:center}.hsub{margin:0 auto 2.5rem}}
+#about{position:relative;padding:6rem 0;background:linear-gradient(180deg,#050d1a 0%,#0A1628 100%);overflow:hidden}
+.agb{position:absolute;inset:0;opacity:.04;background-image:radial-gradient(circle at 2px 2px,rgba(37,99,235,.6) 1px,transparent 0);background-size:40px 40px;pointer-events:none}
+.ainn{display:flex;align-items:center;gap:4rem;margin-bottom:4rem}
+.albox{flex-shrink:0;border-radius:28px;padding:2.5rem;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(13,31,76,.85) 0%,rgba(10,22,40,.95) 100%);border:1px solid rgba(201,168,76,.25);box-shadow:0 20px 60px rgba(0,0,0,.4);position:relative}
+.albox img{width:clamp(160px,18vw,230px);height:clamp(160px,18vw,230px);object-fit:contain;filter:drop-shadow(0 0 20px rgba(37,99,235,.3))}
+.adot{position:absolute;border-radius:50%}
+.ahead{font-family:'Cairo',sans-serif;font-weight:800;font-size:clamp(1.4rem,3vw,2rem);color:#fff;margin-bottom:6px}
+.adiv{width:48px;height:3px;background:var(--gold-400);border-radius:2px;margin-bottom:1.25rem}
+.apara{color:rgba(255,255,255,.65);line-height:1.9;font-size:1rem;margin-bottom:1.1rem}
+.aquote{border-radius:16px;padding:18px 20px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);border-right:4px solid var(--gold-400);margin-bottom:2rem}
+.aquote p:first-child{font-family:'Cairo',sans-serif;font-weight:700;font-size:1.2rem;background:linear-gradient(135deg,#B8860B,#C9A84C,#E8D5A3);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.aquote p:last-child{color:rgba(255,255,255,.4);font-size:.82rem;margin-top:4px}
+.mils{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.mc{border-radius:18px;padding:1.5rem 1.25rem;text-align:center;transition:transform .3s}.mc:hover{transform:translateY(-4px)}
+.mci{font-size:2rem;margin-bottom:.75rem}.mcl{font-family:'Cairo',sans-serif;font-weight:700;font-size:1rem;color:#fff;margin-bottom:6px}
+.mcd{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.6}
+.mcn{display:inline-block;margin-top:10px;font-size:.7rem;font-weight:700;padding:2px 10px;border-radius:50px;background:rgba(255,255,255,.06);color:var(--gold-300)}
+@media(max-width:900px){.ainn{flex-direction:column}.mils{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.mils{grid-template-columns:1fr}}
+#services{position:relative;padding:6rem 0;background:linear-gradient(180deg,#0A1628 0%,#0D1F4C 50%,#0A1628 100%);overflow:hidden}
+.sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.scard{border-radius:22px;padding:2rem 1.75rem;position:relative;overflow:hidden;cursor:pointer;transition:all .4s;border:1px solid rgba(37,99,235,.2);background:linear-gradient(135deg,rgba(10,22,40,.9) 0%,rgba(13,31,76,.55) 100%)}
+.scard::after{content:'';position:absolute;top:0;right:0;width:3px;height:0;background:var(--sa,linear-gradient(180deg,var(--gold-400),var(--royal-400)));border-radius:0 22px 22px 0;transition:height .4s}
+.scard:hover::after,.scard.active::after{height:100%}
+.scard:hover,.scard.active{transform:translateY(-6px);border-color:rgba(201,168,76,.35);box-shadow:0 25px 55px rgba(0,0,0,.45)}
+.snum{font-family:'Cairo',sans-serif;font-size:2.5rem;font-weight:900;opacity:.18;margin-bottom:.5rem;color:var(--gold-400)}
+.sico{width:54px;height:54px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1.25rem}
+.stit{font-family:'Cairo',sans-serif;font-weight:700;font-size:1.15rem;color:#fff;margin-bottom:.75rem}
+.sdesc{font-size:.85rem;color:rgba(255,255,255,.5);line-height:1.7;margin-bottom:1.25rem}
+.sitems{display:flex;flex-direction:column;gap:7px}
+.sitem{display:flex;align-items:center;gap:8px;font-size:.85rem;color:rgba(255,255,255,.7)}
+.sdot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.sfoot{margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.07);font-size:.85rem;font-weight:600;display:flex;align-items:center;gap:6px}
+@media(max-width:1024px){.sgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:640px){.sgrid{grid-template-columns:1fr}}
+#why{position:relative;padding:6rem 0;background:linear-gradient(180deg,#0A1628 0%,#050d1a 100%);overflow:hidden}
+.wbg{position:absolute;inset:0;opacity:.035;background-image:linear-gradient(rgba(37,99,235,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(37,99,235,.5) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.wcard{border-radius:20px;padding:1.75rem;transition:all .35s;border:1px solid rgba(37,99,235,.2);background:rgba(13,31,76,.4)}
+.wcard:hover{transform:translateY(-5px);border-color:rgba(201,168,76,.3);box-shadow:0 20px 45px rgba(0,0,0,.35)}
+.wico{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1rem;transition:transform .3s}
+.wcard:hover .wico{transform:scale(1.1)}
+.wtit{font-family:'Cairo',sans-serif;font-weight:700;font-size:1.1rem;color:#fff;margin-bottom:.6rem}
+.wdesc{font-size:.87rem;color:rgba(255,255,255,.52);line-height:1.75}
+.wline{margin-top:1.25rem;height:2px;border-radius:2px;width:0;background:linear-gradient(90deg,var(--gold-400),transparent);transition:width .5s}
+.wcard:hover .wline{width:100%}
+.wcta{border-radius:20px;padding:1.75rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:linear-gradient(135deg,rgba(13,31,76,.85) 0%,rgba(10,22,40,.95) 100%);border:1px solid rgba(201,168,76,.25)}
+.wctai{width:70px;height:70px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;margin-bottom:1rem;background:rgba(201,168,76,.1);border:2px solid rgba(201,168,76,.3)}
+.wctat{font-family:'Cairo',sans-serif;font-weight:900;font-size:1.3rem;background:linear-gradient(135deg,#B8860B,#C9A84C,#E8D5A3);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.5rem}
+.wctas{font-size:.85rem;color:rgba(255,255,255,.45);margin-bottom:1.25rem;line-height:1.6}
+@media(max-width:1024px){.wgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:640px){.wgrid{grid-template-columns:1fr}}
+#audience{position:relative;padding:6rem 0;background:linear-gradient(180deg,#050d1a 0%,#0A1628 100%);overflow:hidden}
+.agrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.acard{border-radius:28px;padding:2.25rem 2rem;display:flex;flex-direction:column;transition:all .4s;position:relative}
+.acard:hover{transform:translateY(-6px)}
+.aico{width:60px;height:60px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:1.75rem;margin-bottom:1.25rem}
+.atit{font-family:'Cairo',sans-serif;font-weight:800;font-size:1.25rem;color:#fff;margin-bottom:4px}
+.asub{font-size:.85rem;margin-bottom:1rem}
+.adesc{font-size:.87rem;color:rgba(255,255,255,.5);line-height:1.8;margin-bottom:1.5rem;flex:1}
+.aitems{display:flex;flex-direction:column;gap:8px;margin-bottom:1.75rem}
+.aitem{display:flex;align-items:center;gap:8px;font-size:.87rem;color:rgba(255,255,255,.7)}
+.achk{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;flex-shrink:0;font-weight:700}
+.fbdg{position:absolute;top:-12px;left:50%;transform:translateX(-50%);padding:4px 14px;border-radius:50px;font-size:.75rem;font-weight:700;background:linear-gradient(135deg,var(--gold-500),var(--gold-400));color:var(--navy-900);white-space:nowrap}
+@media(max-width:900px){.agrid{grid-template-columns:1fr;max-width:480px;margin:0 auto}}
+#how{position:relative;padding:6rem 0;background:linear-gradient(180deg,#0A1628 0%,#0D1F4C 50%,#0A1628 100%);overflow:hidden}
+.stgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;position:relative;margin-bottom:4rem}
+.stconn{display:none;position:absolute;top:56px;right:12.5%;left:12.5%;height:2px;background:linear-gradient(90deg,rgba(201,168,76,.6),rgba(37,99,235,.4),rgba(201,168,76,.6));z-index:0}
+@media(min-width:1024px){.stconn{display:block}}
+.stitem{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1}
+.stbub{width:112px;height:112px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:1.5rem;transition:transform .3s}
+.stbub:hover{transform:scale(1.06)}
+.stem{font-size:2rem;margin-bottom:2px}.stnum{font-size:.75rem;font-weight:700}
+.sttit{font-family:'Cairo',sans-serif;font-weight:700;font-size:1.05rem;color:#fff;margin-bottom:.6rem}
+.stdesc{font-size:.85rem;color:rgba(255,255,255,.5);line-height:1.7}
+.hcbox{text-align:center;border-radius:28px;padding:3rem 2rem;max-width:560px;margin:0 auto;background:linear-gradient(135deg,rgba(13,31,76,.85) 0%,rgba(10,22,40,.95) 100%);border:1px solid rgba(201,168,76,.25);box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.hcbox h3{font-family:'Cairo',sans-serif;font-weight:800;font-size:1.5rem;color:#fff;margin:1rem 0 .5rem}
+.hcbox p{color:rgba(255,255,255,.5);font-size:.9rem;margin-bottom:1.5rem}
+@media(max-width:900px){.stgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.stgrid{grid-template-columns:1fr}}
+#cta{position:relative;padding:6rem 0;background:linear-gradient(180deg,#050d1a 0%,#0A1628 100%);overflow:hidden}
+.ctop{position:absolute;top:0;right:0;left:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,.5),transparent)}
+.corb{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:350px;background:radial-gradient(ellipse,rgba(201,168,76,.07) 0%,transparent 70%);filter:blur(40px);pointer-events:none}
+.cinn{text-align:center;position:relative;z-index:2}
+.ctit{font-family:'Cairo',sans-serif;font-weight:900;font-size:clamp(2.2rem,6vw,4.5rem);line-height:1.15;color:#fff;margin-bottom:1.5rem}
+.cdiv{width:80px;height:3px;background:linear-gradient(90deg,var(--gold-400),var(--gold-300));border-radius:2px;margin:0 auto 1.5rem}
+.csub{color:rgba(255,255,255,.65);font-size:clamp(1rem,2.5vw,1.15rem);line-height:1.85;max-width:520px;margin:0 auto 3rem}
+.cbtns{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-bottom:3.5rem}
+.csocs{display:flex;justify-content:center;gap:1rem}
+.socb{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;transition:all .3s;border:1px solid transparent}
+.socb:hover{transform:translateY(-3px) scale(1.08)}
+footer{background:linear-gradient(180deg,#050d1a 0%,#020810 100%);border-top:1px solid rgba(37,99,235,.12)}
+.fmain{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;padding:3.5rem 0}
+.fbrand{display:flex;align-items:center;gap:12px;margin-bottom:1rem}
+.fbrand img{width:48px;height:48px;border-radius:50%;border:2px solid var(--gold-400);object-fit:cover}
+.fbn{font-family:'Cairo',sans-serif;font-weight:900;font-size:1.2rem;color:#fff}
+.fbt{font-size:.78rem;color:var(--gold-400)}
+.fdesc{font-size:.87rem;color:rgba(255,255,255,.4);line-height:1.8;margin-bottom:1.25rem}
+.fsrow{display:flex;gap:10px}
+.fsb{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);transition:all .3s}
+.fsb:hover{transform:scale(1.1)}
+.fcol h4{font-size:.85rem;font-weight:700;margin-bottom:1rem;padding-bottom:.6rem}
+.fcol h4.gh{color:var(--gold-300);border-bottom:1px solid rgba(201,168,76,.2)}
+.fcol h4.bh{color:var(--royal-300);border-bottom:1px solid rgba(37,99,235,.2)}
+.fcol a{display:flex;align-items:center;gap:8px;font-size:.87rem;color:rgba(255,255,255,.42);margin-bottom:10px;transition:color .2s}
+.fcol a:hover{color:rgba(255,255,255,.9)}
+.fbot{border-top:1px solid rgba(255,255,255,.05);padding:1.25rem 0;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.fbot p{font-size:.8rem;color:rgba(255,255,255,.3)}
+@media(max-width:900px){.fmain{grid-template-columns:1fr 1fr}}@media(max-width:580px){.fmain{grid-template-columns:1fr;gap:2rem}.fbot{justify-content:center;text-align:center}}
+#waf{position:fixed;bottom:1.5rem;left:1.5rem;z-index:90;display:flex;align-items:center;gap:8px;padding:12px 20px;border-radius:50px;background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;font-family:'Tajawal',sans-serif;font-size:.9rem;font-weight:700;cursor:pointer;text-decoration:none;box-shadow:0 8px 30px rgba(37,211,102,.4);transition:all .3s}
+#waf:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(37,211,102,.45)}
+.wap{position:absolute;inset:0;border-radius:50px;background:#25D366;animation:waping 2.5s ease-out infinite;opacity:.3;z-index:-1}
+@keyframes waping{0%{transform:scale(1);opacity:.3}100%{transform:scale(1.18);opacity:0}}
+@media(max-width:480px){#waf .wlbl{display:none}#waf{padding:12px;border-radius:50%}}
+</style></head><body>
+<nav id="navbar"><div class="container"><div class="navi">
+  <a class="nlogo" href="#hero"><img src="profile.png" alt="تمكّن"/><span class="nlogt">تمكّن</span></a>
+  <div class="nlinks"><a href="#hero">الرئيسية</a><a href="#about">من نحن</a><a href="#services">خدماتنا</a><a href="#why">لماذا تمكّن؟</a><a href="#cta">تواصل معنا</a></div>
+  <div style="display:flex;align-items:center;gap:10px">
+    <a class="btn bo bsm" href="http://localhost:5173/login" style="border-color: var(--gold-400); color: var(--gold-300);" title="دخول لوحة التحكم والطلاب">دخول المنصة 🔐</a>
+    <a class="btn bg bsm ncta" href="https://wa.me/201022012702" target="_blank" rel="noopener">تواصل معنا</a>
+  </div>
+  <button class="hbtn" id="hbtn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+</div></div></nav>
+<div class="movl" id="movl"></div>
+<div class="mdrw" id="mdrw">
+  <div class="dhead"><div class="nlogo"><img src="profile.png" alt="تمكّن"/><span class="nlogt">تمكّن</span></div>
+    <button class="dcls" id="dcls"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="dlinks"><a href="#hero">الرئيسية</a><a href="#about">من نحن</a><a href="#services">خدماتنا</a><a href="#why">لماذا تمكّن؟</a><a href="#audience">من نخدم؟</a><a href="#how">كيف نعمل؟</a><a href="#cta">تواصل معنا</a></div>
+  <div class="dacts">
+    <a class="btn bo" href="http://localhost:5173/login" style="border-color: var(--gold-400); color: var(--gold-300); text-align: center;">دخول المنصة 🔐</a>
+    <a class="btn bw" href="https://wa.me/201022012702" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>واتساب</a>
+    <a class="btn bo" href="https://www.facebook.com/TamkeenLearning/" target="_blank" rel="noopener">فيسبوك</a>
+  </div>
+</div>
+
+<section id="hero">
+  <canvas id="hcanvas"></canvas>
+  <div class="horb" style="top:25%;left:30%;width:400px;height:400px;background:radial-gradient(circle,rgba(37,99,235,.12) 0%,transparent 70%)"></div>
+  <div class="horb" style="bottom:20%;right:20%;width:300px;height:300px;background:radial-gradient(circle,rgba(201,168,76,.08) 0%,transparent 70%)"></div>
+  <div class="hcontent"><div class="container"><div class="hinner">
+    <div class="htext">
+      <div class="hbadge"><span class="hbdot"></span>منصة تعليمية وتقنية متكاملة</div>
+      <h1 class="htitle"><span class="lg">تعلّم، تطوّر،</span><span class="lw">أنجز</span></h1>
+      <p class="hsub">منصة تعليمية وتقنية تساعدك على تطوير المعرفة والمهارات وتحقيق أهدافك. من التعليم والدعم الأكاديمي إلى البرمجة والذكاء الاصطناعي.</p>
+      <div class="hctas"><a class="btn bg blg" href="https://wa.me/201022012702" target="_blank" rel="noopener">تواصل معنا</a><a class="btn bo blg" href="#services">اكتشف خدماتنا</a></div>
+      <div class="hpills"><span class="hpill">📚 تعليم</span><span class="hpill">🎓 أكاديميا</span><span class="hpill">💻 برمجة</span><span class="hpill">📊 بيانات</span><span class="hpill">🤖 ذكاء اصطناعي</span></div>
+    </div>
+    <div class="hlogowrap"><div class="hlogoinner"><div class="lring1"></div><div class="lring2"></div><img class="hlogoimg" src="Tamkeen.png" alt="شعار تمكّن"/></div></div>
+  </div></div></div>
+  <div class="shint"><span>تمرير للأسفل</span><svg class="sarrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+</section>
+
+<section id="about"><div class="agb"></div><div class="container">
+  <div style="text-align:center;margin-bottom:4rem" class="reveal"><div class="sbadge sg">التعريف بالمنصة</div><h2 class="stitle">من <span class="gtg">نحن؟</span></h2><div class="gdiv"></div></div>
+  <div class="ainn">
+    <div class="albox reveal"><span class="adot" style="top:1rem;right:1rem;width:8px;height:8px;background:var(--gold-400);box-shadow:0 0 8px var(--gold-400)"></span><span class="adot" style="bottom:1rem;left:1rem;width:6px;height:6px;background:var(--royal-300);box-shadow:0 0 8px var(--royal-300)"></span><img src="Tamkeen.png" alt="شعار تمكّن"/></div>
+    <div class="reveal d1"><h3 class="ahead">تمكّن — أكثر من مجرد منصة تعليمية</h3><div class="adiv"></div>
+      <p class="apara"><span class="gtg" style="font-weight:700">تمكّن</span> منصة تعليمية وتقنية متكاملة تجمع بين التعليم الأكاديمي، الدعم الدراسي، تطوير المهارات، والحلول البرمجية والتقنية في تجربة واحدة.</p>
+      <p class="apara">نؤمن بأن كل طالب وكل فرد يستحق دعماً حقيقياً يأخذه من مرحلة التعلّم إلى مرحلة التطبيق والإنجاز. نقدم خدماتنا بالكامل عبر الإنترنت لخدمة الأسواق الخليجية والسعودية.</p>
+      <div class="aquote"><p>"تعلّم، تطوّر، أنجز"</p><p>رؤية تمكّن — من المعرفة إلى الإنجاز</p></div>
+    </div>
+  </div>
+  <p style="text-align:center;color:rgba(255,255,255,.3);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.5rem" class="reveal">رحلتك مع تمكّن</p>
+  <div class="mils">
+    <div class="mc reveal" style="background:rgba(37,99,235,.12);border:1px solid rgba(37,99,235,.3)"><div class="mci">🎓</div><div class="mcl">المعرفة</div><div class="mcd">نبني الأساس العلمي والمعرفي الصحيح</div><span class="mcn">01</span></div>
+    <div class="mc reveal d1" style="background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.3)"><div class="mci">🔧</div><div class="mcl">المهارة</div><div class="mcd">نحوّل المعرفة إلى مهارات قابلة للتطبيق</div><span class="mcn">02</span></div>
+    <div class="mc reveal d2" style="background:rgba(37,99,235,.12);border:1px solid rgba(37,99,235,.3)"><div class="mci">⚡</div><div class="mcl">التطبيق</div><div class="mcd">نمكّنك من توظيف مهاراتك في الواقع</div><span class="mcn">03</span></div>
+    <div class="mc reveal d3" style="background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.3)"><div class="mci">🏆</div><div class="mcl">الإنجاز</div><div class="mcd">تحقيق الأهداف والنتائج الملموسة</div><span class="mcn">04</span></div>
+  </div>
+</div></section>
+<section id="services"><div class="container">
+  <div style="text-align:center;margin-bottom:4rem" class="reveal"><div class="sbadge sb">ما نقدمه</div><h2 class="stitle">خدماتنا <span class="gtg">المتكاملة</span></h2><div class="gdiv"></div><p class="ssub">أربعة محاور رئيسية تغطي كل احتياجاتك التعليمية والتقنية</p></div>
+  <div class="sgrid">
+    <div class="scard reveal" style="--sa:linear-gradient(180deg,var(--gold-400),var(--royal-400))">
+      <div class="snum">01</div><div class="sico" style="background:rgba(37,99,235,.15);border:1px solid rgba(37,99,235,.35)">📚</div>
+      <h3 class="stit">التعليم</h3><p class="sdesc">دعم أكاديمي شامل لطلاب المدارس والجامعات عبر الإنترنت، بأسلوب واضح ومبسط.</p>
+      <ul class="sitems">
+        <li class="sitem"><span class="sdot" style="background:var(--royal-300)"></span>دروس أونلاين تفاعلية</li>
+        <li class="sitem"><span class="sdot" style="background:var(--royal-300)"></span>تأسيس وتقوية المادة</li>
+        <li class="sitem"><span class="sdot" style="background:var(--royal-300)"></span>مراجعات مكثفة</li>
+        <li class="sitem"><span class="sdot" style="background:var(--royal-300)"></span>متابعة الطالب</li>
+        <li class="sitem"><span class="sdot" style="background:var(--royal-300)"></span>شرح مبسط وواضح</li>
+        <li class="sitem"><span class="sdot" style="background:var(--royal-300)"></span>الاستعداد للاختبارات</li>
+      </ul>
+      <div class="sfoot" style="color:var(--royal-300)">اكتشف الخدمة <span>←</span></div>
+    </div>
+    <div class="scard reveal d1" style="--sa:linear-gradient(180deg,var(--gold-400),var(--gold-500))">
+      <div class="snum">02</div><div class="sico" style="background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.35)">🎓</div>
+      <h3 class="stit">الخدمات الأكاديمية</h3><p class="sdesc">خدمات أكاديمية متخصصة لمساعدة الطلاب في مشاريعهم وأبحاثهم الجامعية.</p>
+      <ul class="sitems">
+        <li class="sitem"><span class="sdot" style="background:var(--gold-300)"></span>دعم الأبحاث والتقارير</li>
+        <li class="sitem"><span class="sdot" style="background:var(--gold-300)"></span>العروض التقديمية</li>
+        <li class="sitem"><span class="sdot" style="background:var(--gold-300)"></span>المشاريع التعليمية</li>
+        <li class="sitem"><span class="sdot" style="background:var(--gold-300)"></span>شرح المشاريع</li>
+        <li class="sitem"><span class="sdot" style="background:var(--gold-300)"></span>التدريب على المناقشة</li>
+        <li class="sitem"><span class="sdot" style="background:var(--gold-300)"></span>المهارات الأكاديمية</li>
+      </ul>
+      <div class="sfoot" style="color:var(--gold-300)">اكتشف الخدمة <span>←</span></div>
+    </div>
+    <div class="scard reveal d2" style="--sa:linear-gradient(180deg,var(--royal-400),var(--gold-400))">
+      <div class="snum">03</div><div class="sico" style="background:rgba(37,99,235,.15);border:1px solid rgba(37,99,235,.35)">💻</div>
+      <h3 class="stit">البرمجة والتقنية</h3><p class="sdesc">حلول برمجية وتقنية احترافية لتحويل أفكارك إلى منتجات رقمية حقيقية.</p>
+      <ul class="sitems">
+        <li class="sitem"><span class="sdot" style="background:var(--royal-300)"></span>تطوير المواقع</li>
+        <li class="sitem"><span class="sdot" style="background:var(--royal-300)"></span>تطبيقات الويب</li>
+        <li class="sitem"><span class="sdot" style="background:var(--royal-300)"></span>Python &amp; SQL</li>
+        <li class="sitem"><span class="sdot" style="background:var(--royal-300)"></span>قواعد البيانات</li>
+        <li class="sitem"><span class="sdot" style="background:var(--royal-300)"></span>APIs &amp; Automation</li>
+        <li class="sitem"><span class="sdot" style="background:var(--royal-300)"></span>حلول برمجية مخصصة</li>
+      </ul>
+      <div class="sfoot" style="color:var(--royal-300)">اكتشف الخدمة <span>←</span></div>
+    </div>
+    <div class="scard reveal d3" style="--sa:linear-gradient(180deg,var(--gold-400),var(--royal-400))">
+      <div class="snum">04</div><div class="sico" style="background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.35)">🤖</div>
+      <h3 class="stit">AI &amp; Data</h3><p class="sdesc">حلول متقدمة في الذكاء الاصطناعي وتحليل البيانات لمساعدتك على اتخاذ قرارات أذكى.</p>
+      <ul class="sitems">
+        <li class="sitem"><span class="sdot" style="background:var(--gold-300)"></span>تحليل البيانات</li>
+        <li class="sitem"><span class="sdot" style="background:var(--gold-300)"></span>Power BI &amp; Dashboards</li>
+        <li class="sitem"><span class="sdot" style="background:var(--gold-300)"></span>Data Visualization</li>
+        <li class="sitem"><span class="sdot" style="background:var(--gold-300)"></span>Machine Learning</li>
+        <li class="sitem"><span class="sdot" style="background:var(--gold-300)"></span>AI Solutions</li>
+        <li class="sitem"><span class="sdot" style="background:var(--gold-300)"></span>الأتمتة بالذكاء الاصطناعي</li>
+      </ul>
+      <div class="sfoot" style="color:var(--gold-300)">اكتشف الخدمة <span>←</span></div>
+    </div>
+  </div>
+  <div style="margin-top:3.5rem;text-align:center" class="reveal"><p style="color:rgba(255,255,255,.4);font-size:.9rem;margin-bottom:1.25rem">هل تبحث عن خدمة محددة؟ تواصل معنا وسنجد الحل المناسب لك.</p><a class="btn bg" href="https://wa.me/201022012702" target="_blank" rel="noopener">استفسر الآن</a></div>
+</div></section>
+
+<section id="why"><div class="wbg"></div><div class="container">
+  <div style="text-align:center;margin-bottom:4rem" class="reveal"><div class="sbadge sg">مميزاتنا</div><h2 class="stitle">لماذا <span class="gtg">تمكّن؟</span></h2><div class="gdiv"></div><p class="ssub">ما يجعلنا مختلفين عن غيرنا</p></div>
+  <div class="wgrid">
+    <div class="wcard reveal" style="background:rgba(201,168,76,.08);border-color:rgba(201,168,76,.25)"><div class="wico" style="background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.3)">🎯</div><div class="wtit">حلول حسب الاحتياج</div><div class="wdesc">لا نقدم حلولاً جاهزة. نستمع إليك ونصمم الحل المناسب لاحتياجك تحديداً، سواء كنت طالباً أو فرداً أو صاحب مشروع.</div><div class="wline"></div></div>
+    <div class="wcard reveal d1" style="background:rgba(37,99,235,.1);border-color:rgba(37,99,235,.25)"><div class="wico" style="background:rgba(37,99,235,.12);border:1px solid rgba(37,99,235,.3)">👨‍🏫</div><div class="wtit">تعليم ومتابعة</div><div class="wdesc">نهتم بمتابعة تقدمك باستمرار. ليس مجرد شرح وانتهى، بل متابعة حقيقية حتى تصل للنتيجة المطلوبة.</div><div class="wline"></div></div>
+    <div class="wcard reveal d2" style="background:rgba(201,168,76,.08);border-color:rgba(201,168,76,.25)"><div class="wico" style="background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.3)">💡</div><div class="wtit">تبسيط المعرفة</div><div class="wdesc">نؤمن بأن أي مفهوم معقد يمكن تبسيطه. أسلوبنا في الشرح يجعل المادة الصعبة سهلة وممتعة.</div><div class="wline"></div></div>
+    <div class="wcard reveal" style="background:rgba(37,99,235,.1);border-color:rgba(37,99,235,.25)"><div class="wico" style="background:rgba(37,99,235,.12);border:1px solid rgba(37,99,235,.3)">💻</div><div class="wtit">تقنية حديثة</div><div class="wdesc">نستخدم أحدث الأدوات والتقنيات لتقديم خدمات برمجية وذكاء اصطناعي تتوافق مع متطلبات السوق الحالي.</div><div class="wline"></div></div>
+    <div class="wcard reveal d1" style="background:rgba(201,168,76,.08);border-color:rgba(201,168,76,.25)"><div class="wico" style="background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.3)">🌍</div><div class="wtit">خدمة أونلاين</div><div class="wdesc">كل خدماتنا متاحة عبر الإنترنت. تواصل معنا من أي مكان في السعودية أو الخليج بكل سهولة ومرونة.</div><div class="wline"></div></div>
+    <div class="wcta reveal d2"><div class="wctai">🚀</div><div class="wctat">ابدأ رحلتك اليوم</div><div class="wctas">لا تنتظر الوقت المثالي. أرسل لنا احتياجك الآن وسنكون معك في كل خطوة.</div><a class="btn bg bsm" href="https://wa.me/201022012702" target="_blank" rel="noopener">تواصل الآن</a></div>
+  </div>
+</div></section>
+<section id="audience"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,.06) 0%,transparent 70%);filter:blur(80px);pointer-events:none"></div>
+<div class="container" style="position:relative;z-index:1">
+  <div style="text-align:center;margin-bottom:4rem" class="reveal"><div class="sbadge sb">نخدم الجميع</div><h2 class="stitle">من <span class="gtg">نخدم؟</span></h2><div class="gdiv"></div><p class="ssub">خدماتنا مصممة لفئات متعددة — كلنا واحد في مسيرة التعلم والنمو</p></div>
+  <div class="agrid">
+    <div class="acard reveal" style="background:linear-gradient(135deg,rgba(13,31,76,.7) 0%,rgba(10,22,40,.95) 100%);border:1px solid rgba(37,99,235,.3);box-shadow:0 10px 30px rgba(0,0,0,.3)">
+      <div class="aico" style="background:rgba(37,99,235,.15);border:1px solid rgba(37,99,235,.3)">🎓</div><div class="atit">طلاب المدارس</div><div class="asub" style="color:var(--royal-300)">المرحلة الابتدائية والمتوسطة والثانوية</div>
+      <div class="adesc">تأسيس قوي، شرح واضح، تقوية مستمرة، ومراجعة احترافية للاختبارات. نساعد طلاب المدارس على بناء أساس علمي متين.</div>
+      <ul class="aitems"><li class="aitem"><span class="achk" style="background:rgba(37,99,235,.15);border:1px solid rgba(37,99,235,.3);color:var(--royal-300)">✓</span>تأسيس وتقوية المواد</li><li class="aitem"><span class="achk" style="background:rgba(37,99,235,.15);border:1px solid rgba(37,99,235,.3);color:var(--royal-300)">✓</span>شرح مبسط ومبتكر</li><li class="aitem"><span class="achk" style="background:rgba(37,99,235,.15);border:1px solid rgba(37,99,235,.3);color:var(--royal-300)">✓</span>مراجعة للاختبارات</li><li class="aitem"><span class="achk" style="background:rgba(37,99,235,.15);border:1px solid rgba(37,99,235,.3);color:var(--royal-300)">✓</span>متابعة مستمرة</li></ul>
+      <a class="btn bo" href="https://wa.me/201022012702" target="_blank" rel="noopener" style="width:100%">ابدأ الآن</a>
+    </div>
+    <div class="acard reveal d1" style="background:linear-gradient(135deg,rgba(201,168,76,.12) 0%,rgba(13,31,76,.92) 100%);border:1px solid rgba(201,168,76,.35);box-shadow:0 20px 60px rgba(0,0,0,.4)">
+      <div class="fbdg">الأكثر طلباً</div>
+      <div class="aico" style="background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.3)">🎓</div><div class="atit">طلاب الجامعات</div><div class="asub" style="color:var(--gold-300)">البكالوريوس والدراسات العليا</div>
+      <div class="adesc">خدمات أكاديمية متخصصة تشمل الأبحاث، المشاريع، العروض التقديمية، وتطوير المهارات الدراسية والمهنية.</div>
+      <ul class="aitems"><li class="aitem"><span class="achk" style="background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.3);color:var(--gold-300)">✓</span>أبحاث وتقارير</li><li class="aitem"><span class="achk" style="background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.3);color:var(--gold-300)">✓</span>مشاريع ومنهجيات</li><li class="aitem"><span class="achk" style="background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.3);color:var(--gold-300)">✓</span>عروض تقديمية</li><li class="aitem"><span class="achk" style="background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.3);color:var(--gold-300)">✓</span>مهارات أكاديمية</li></ul>
+      <a class="btn bg" href="https://wa.me/201022012702" target="_blank" rel="noopener" style="width:100%">ابدأ الآن</a>
+    </div>
+    <div class="acard reveal d2" style="background:linear-gradient(135deg,rgba(13,31,76,.7) 0%,rgba(10,22,40,.95) 100%);border:1px solid rgba(37,99,235,.3);box-shadow:0 10px 30px rgba(0,0,0,.3)">
+      <div class="aico" style="background:rgba(37,99,235,.15);border:1px solid rgba(37,99,235,.3)">💻</div><div class="atit">الأفراد وأصحاب المشاريع</div><div class="asub" style="color:var(--royal-300)">من يريد التطور أو يبحث عن حلول</div>
+      <div class="adesc">حلول برمجية وتقنية وذكاء اصطناعي مصممة لمساعدتك على تحقيق أهدافك الرقمية والمهنية.</div>
+      <ul class="aitems"><li class="aitem"><span class="achk" style="background:rgba(37,99,235,.15);border:1px solid rgba(37,99,235,.3);color:var(--royal-300)">✓</span>برمجة وتطوير</li><li class="aitem"><span class="achk" style="background:rgba(37,99,235,.15);border:1px solid rgba(37,99,235,.3);color:var(--royal-300)">✓</span>تحليل بيانات</li><li class="aitem"><span class="achk" style="background:rgba(37,99,235,.15);border:1px solid rgba(37,99,235,.3);color:var(--royal-300)">✓</span>AI Solutions</li><li class="aitem"><span class="achk" style="background:rgba(37,99,235,.15);border:1px solid rgba(37,99,235,.3);color:var(--royal-300)">✓</span>حلول رقمية</li></ul>
+      <a class="btn bo" href="https://wa.me/201022012702" target="_blank" rel="noopener" style="width:100%">ابدأ الآن</a>
+    </div>
+  </div>
+</div></section>
+
+<section id="how"><div class="container">
+  <div style="text-align:center;margin-bottom:4rem" class="reveal"><div class="sbadge sb">الخطوات</div><h2 class="stitle">كيف <span class="gtg">نعمل؟</span></h2><div class="gdiv"></div><p class="ssub">أربع خطوات بسيطة تفصلك عن تحقيق هدفك</p></div>
+  <div class="stgrid">
+    <div class="stconn"></div>
+    <div class="stitem reveal"><div class="stbub" style="background:linear-gradient(135deg,rgba(37,99,235,.18) 0%,rgba(10,22,40,.9) 100%);border:2px solid rgba(37,99,235,.45);box-shadow:0 0 30px rgba(37,99,235,.15)"><span class="stem">💬</span><span class="stnum" style="color:var(--royal-300)">01</span></div><div class="sttit">أرسل احتياجك</div><div class="stdesc">تواصل معنا عبر واتساب وأخبرنا بما تحتاج بكل حرية.</div></div>
+    <div class="stitem reveal d1"><div class="stbub" style="background:linear-gradient(135deg,rgba(201,168,76,.12) 0%,rgba(10,22,40,.9) 100%);border:2px solid rgba(201,168,76,.45);box-shadow:0 0 30px rgba(201,168,76,.12)"><span class="stem">🔍</span><span class="stnum" style="color:var(--gold-300)">02</span></div><div class="sttit">نحدد الحل المناسب</div><div class="stdesc">نحلل احتياجك بدقة ونضع خطة واضحة تناسب وضعك وأهدافك.</div></div>
+    <div class="stitem reveal d2"><div class="stbub" style="background:linear-gradient(135deg,rgba(37,99,235,.18) 0%,rgba(10,22,40,.9) 100%);border:2px solid rgba(37,99,235,.45);box-shadow:0 0 30px rgba(37,99,235,.15)"><span class="stem">⚙️</span><span class="stnum" style="color:var(--royal-300)">03</span></div><div class="sttit">نبدأ التنفيذ أو التعلم</div><div class="stdesc">سواء كان دروساً أو مشروعاً أو حلاً تقنياً، نبدأ التنفيذ فوراً بجودة عالية.</div></div>
+    <div class="stitem reveal d3"><div class="stbub" style="background:linear-gradient(135deg,rgba(201,168,76,.12) 0%,rgba(10,22,40,.9) 100%);border:2px solid rgba(201,168,76,.45);box-shadow:0 0 30px rgba(201,168,76,.12)"><span class="stem">🏆</span><span class="stnum" style="color:var(--gold-300)">04</span></div><div class="sttit">تحقق هدفك</div><div class="stdesc">نصل معاً إلى النتيجة المطلوبة — نجاح أكاديمي، مهارة جديدة، أو منتج رقمي.</div></div>
+  </div>
+  <div class="hcbox reveal"><div style="font-size:2.5rem">🚀</div><h3>جاهز؟ الخطوة الأولى سهلة</h3><p>أرسل لنا رسالة واحدة فقط وسنتولى الباقي</p>
+    <a class="btn bg" href="https://wa.me/201022012702" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>ابدأ الآن عبر واتساب</a>
+  </div>
+</div></section>
+<section id="cta"><div class="ctop"></div><div class="corb"></div><div class="container"><div class="cinn">
+  <div class="sbadge sg reveal" style="display:inline-flex;margin-bottom:1.5rem"><span style="width:8px;height:8px;border-radius:50%;background:var(--gold-400);animation:pdot 2s ease-in-out infinite"></span>متاحون الآن للمساعدة</div>
+  <h2 class="ctit reveal">جاهز <span class="gtg">تبدأ؟</span></h2>
+  <div class="cdiv reveal"></div>
+  <p class="csub reveal">أخبرنا بما تحتاج، ودعنا نساعدك في الوصول إلى الحل المناسب. لا التزام، مجرد محادثة.</p>
+  <div class="cbtns reveal">
+    <a class="btn bg blg" href="https://wa.me/201022012702" target="_blank" rel="noopener">تواصل معنا الآن</a>
+    <a class="btn bw blg" href="https://wa.me/201022012702" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>واتساب</a>
+  </div>
+  <div class="csocs reveal">
+    <a class="socb" href="https://wa.me/201022012702" target="_blank" rel="noopener" style="background:rgba(37,211,102,.1);border-color:rgba(37,211,102,.25);color:#25D366"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+    <a class="socb" href="https://www.facebook.com/TamkeenLearning/" target="_blank" rel="noopener" style="background:rgba(24,119,242,.1);border-color:rgba(24,119,242,.25);color:#1877F2"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    <a class="socb" href="https://www.instagram.com/tamkeen" target="_blank" rel="noopener" style="background:rgba(228,64,95,.1);border-color:rgba(228,64,95,.25);color:#E4405F"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+  </div>
+</div></div></section>
+
+<footer><div class="container">
+  <div class="fmain">
+    <div>
+      <div class="fbrand"><img src="profile.png" alt="تمكّن"/><div><div class="fbn">تمكّن</div><div class="fbt">تعلّم، تطوّر، أنجز</div></div></div>
+      <p class="fdesc">منصة تعليمية وتقنية تجمع بين التعليم، الدعم الأكاديمي، البرمجة، وحلول الذكاء الاصطناعي.</p>
+      <div class="fsrow">
+        <a class="fsb" href="https://wa.me/201022012702" target="_blank" rel="noopener" style="color:#25D366"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        <a class="fsb" href="https://www.facebook.com/TamkeenLearning/" target="_blank" rel="noopener" style="color:#1877F2"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a class="fsb" href="https://www.instagram.com/tamkeen" target="_blank" rel="noopener" style="color:#E4405F"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      </div>
+    </div>
+    <div class="fcol"><h4 class="gh">روابط سريعة</h4>
+      <a href="#hero"><span style="color:var(--gold-500);font-size:.8rem">←</span> الرئيسية</a>
+      <a href="#about"><span style="color:var(--gold-500);font-size:.8rem">←</span> من نحن</a>
+      <a href="#services"><span style="color:var(--gold-500);font-size:.8rem">←</span> خدماتنا</a>
+      <a href="#cta"><span style="color:var(--gold-500);font-size:.8rem">←</span> تواصل معنا</a>
+    </div>
+    <div class="fcol"><h4 class="bh">خدماتنا</h4>
+      <a href="#services"><span style="color:var(--royal-400);font-size:.6rem">◆</span> التعليم</a>
+      <a href="#services"><span style="color:var(--royal-400);font-size:.6rem">◆</span> الخدمات الأكاديمية</a>
+      <a href="#services"><span style="color:var(--royal-400);font-size:.6rem">◆</span> البرمجة والتقنية</a>
+      <a href="#services"><span style="color:var(--royal-400);font-size:.6rem">◆</span> AI &amp; Data</a>
+    </div>
+  </div>
+  <div class="fbot"><p>© 2026 تمكّن. جميع الحقوق محفوظة.</p><div style="display:flex;align-items:center;gap:8px"><span style="width:6px;height:6px;border-radius:50%;background:var(--gold-400);display:inline-block"></span><p>صُنع بـ ❤ للسوق الخليجي</p></div></div>
+</div></footer>
+
+<a id="waf" href="https://wa.me/201022012702" target="_blank" rel="noopener"><span class="wap"></span><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wlbl">واتساب</span></a>
+
+<script>
+const nav=document.getElementById("navbar");
+window.addEventListener("scroll",()=>nav.classList.toggle("scrolled",scrollY>60),{passive:true});
+const hbtn=document.getElementById("hbtn"),movl=document.getElementById("movl"),mdrw=document.getElementById("mdrw"),dcls=document.getElementById("dcls");
+function openD(){mdrw.classList.add("open");movl.classList.add("open");document.body.style.overflow="hidden"}
+function closeD(){mdrw.classList.remove("open");movl.classList.remove("open");document.body.style.overflow=""}
+hbtn.addEventListener("click",openD);dcls.addEventListener("click",closeD);movl.addEventListener("click",closeD);
+mdrw.querySelectorAll("a").forEach(a=>a.addEventListener("click",closeD));
+document.querySelectorAll("a[href^=\"#\"]").forEach(a=>{a.addEventListener("click",e=>{const t=document.querySelector(a.getAttribute("href"));if(t){e.preventDefault();t.scrollIntoView({behavior:"smooth"})}})});
+(function(){
+  const canvas=document.getElementById("hcanvas");if(!canvas)return;
+  const ctx=canvas.getContext("2d");let animId,particles=[];
+  const NUM=innerWidth<768?45:90,MD=130;
+  function resize(){canvas.width=canvas.offsetWidth;canvas.height=canvas.offsetHeight}
+  resize();window.addEventListener("resize",resize,{passive:true});
+  class P{constructor(){this.reset()}reset(){this.x=Math.random()*canvas.width;this.y=Math.random()*canvas.height;this.vx=(Math.random()-.5)*.42;this.vy=(Math.random()-.5)*.42;this.r=Math.random()*2.2+.8;this.g=Math.random()<.18}update(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>canvas.width)this.vx*=-1;if(this.y<0||this.y>canvas.height)this.vy*=-1}draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);ctx.fillStyle=this.g?"rgba(201,168,76,.85)":"rgba(59,130,246,.75)";ctx.fill()}}
+  for(let i=0;i<NUM;i++)particles.push(new P());
+  function loop(){ctx.clearRect(0,0,canvas.width,canvas.height);for(let i=0;i<particles.length;i++){particles[i].update();particles[i].draw();for(let j=i+1;j<particles.length;j++){const dx=particles[i].x-particles[j].x,dy=particles[i].y-particles[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<MD){const a=(1-d/MD)*.32,ig=particles[i].g||particles[j].g;ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);ctx.strokeStyle=ig?`rgba(201,168,76,${a*.55})`:`rgba(37,99,235,${a})`;ctx.lineWidth=.75;ctx.stroke()}}}animId=requestAnimationFrame(loop)}
+  loop();
+})();
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target)}})},{threshold:.12,rootMargin:"0px 0px -40px 0px"});
+document.querySelectorAll(".reveal").forEach(el=>obs.observe(el));
+document.querySelectorAll(".scard").forEach(c=>{c.addEventListener("click",()=>{document.querySelectorAll(".scard").forEach(x=>x.classList.remove("active"));c.classList.add("active")})});
+</script></body></html>
