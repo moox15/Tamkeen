@@ -1,6 +1,7 @@
 import express from 'express';
 import session from 'express-session';
 import cors from 'cors';
+import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import dotenv from 'dotenv';
@@ -82,6 +83,16 @@ app.use('/api/auth', authRoutes);
 app.use('/api/admin', validateCsrf, adminRoutes);
 app.use('/api/student', validateCsrf, studentRoutes);
 app.use('/api/files', fileRoutes);
+
+// Serve client frontend in production
+const clientDist = join(__dirname, '../client/dist');
+if (fs.existsSync(clientDist)) {
+  app.use(express.static(clientDist));
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api')) return next();
+    res.sendFile(join(clientDist, 'index.html'));
+  });
+}
 
 // ============================================================
 // ERROR HANDLING
